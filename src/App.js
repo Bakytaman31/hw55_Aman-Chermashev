@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Remote from "./Componets/Remote/Remote";
-
+import AddIngPic from "./Componets/AddIngPic/AddIngPic";
 class App extends Component {
     state = {
       ingridients:[
@@ -39,12 +39,9 @@ class App extends Component {
               price={this.state.totalPrice}
               addIngr={this.addIngridient}
               removeIngridient={this.removeIngridient}/>
-          <div className="Burger">
-              <div className="BreadTop">
-                  <div className="Seeds1"></div>
-                  <div className="Seeds2"></div>
-              </div>
-              <div className="BreadBottom"></div>
+          <div className="Container">
+              <span className="span"> Burger</span>
+              <AddIngPic ing={this.state.ingridients}/>
               <p>Total Price: {this.state.totalPrice}</p>
           </div>
       </div>
